@@ -6,6 +6,8 @@ import * as bookstore from "../../../api/bookstore.ts";
 export const params = {
   username:"HakanGM",
   password:"Hb12345$",
+  book1:"9781449325862",
+  book2:"9781449331818",
 }
 
 test.describe('Bookstore Api validation', () => {
@@ -15,15 +17,25 @@ test.describe('Bookstore Api validation', () => {
 
   test.beforeEach(async ({request}) => {
     await init(request);
+    await bookstore.createUser();
+    await bookstore.getToken();
   });
 
   test.afterEach(async ({}) => {
     await bookstore.deleteUser();
   });
 
-  test('Verify entry creation', async () => {
-    await bookstore.createUser();
-    await bookstore.getToken();
+  test('add/delete books', async () => {
+    await bookstore.addBooks(true);
+    await bookstore.getUser();
+    await bookstore.verifyBooksAreAdded();
+    await bookstore.removeBookFromUser();
+    await bookstore.getUser();
+    await bookstore.verifyBookIsRemoved();
+  });
+
+  test('Unathorized addition Attempt', async () => {
+    await bookstore.addBooks(false);
   });
 
 });

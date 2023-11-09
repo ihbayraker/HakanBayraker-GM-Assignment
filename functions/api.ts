@@ -5,6 +5,8 @@ let api: APIRequestContext;
 export let params:{
     username?:string,
     password?:string,
+    book1?:string,
+    book2?:string,
 }
 
 export async function assignParams(parameters:object){
@@ -19,8 +21,8 @@ export async function getRequest(url:string,authorization?:any){
     return await api.get(url,{headers:authorization});
 }
 
-export async function deleteRequest(url:string,authorization?:any){
-    return await api.delete(url,{headers:authorization});
+export async function deleteRequest(url:string,authorization?:any,body?:any){
+    return await api.delete(url,{data:body,headers:authorization});
 }
 
 export async function postRequest(url:string,body:any,authorization?:any){
