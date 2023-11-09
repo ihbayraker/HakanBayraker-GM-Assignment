@@ -20,6 +20,6 @@ export async function verifyNavigationBrokenPage(){
 export async function verifyBrokenImage(){
     const imgSrc = await getAttirbute(page.validImage,"src");
     const res = await getRequest(page.baseUrl+imgSrc);
-    await equal(res.body(),200)
+    await equal(res.status(),200)
 
 }
