@@ -125,16 +125,16 @@ export async function setState(){
 
     switch(params.state){
         case "NCR":
-            await click(register.stateOption + "[" + 1 + "]"); 
+            await eventClick(register.stateOption + "[" + 1 + "]"); 
             break;
         case "Utter Pradesh":
-            await click(register.stateOption + "[" + 2 +"]");
+            await eventClick(register.stateOption + "[" + 2 +"]");
             break;
         case "Haryana":
-            await click(register.stateOption + "[" + 3 + "]");
+            await eventClick(register.stateOption + "[" + 3 + "]");
             break;
         case "Rajasthan":
-            await click(register.stateOption + "[" + 4 + "]");
+            await eventClick(register.stateOption + "[" + 4 + "]");
             break;
     }
 
