@@ -23,3 +23,7 @@ export async function clickCategoryCardElements(){
 export async function clickCategoryCardForms(){
     await click(page.categoryCardForms);
 }
+
+export async function clickCategoryCardWidget(){
+    await click(page.categoryCardWidgets);
+}

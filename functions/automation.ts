@@ -13,9 +13,11 @@ export let params:{
     gender?:string,
     mobile?:string,
     birthday?:string,
+    birthdayLong?:string,
     subjects?:string,
     hobbies?:string,
     picture?:string,
+    picturePath?:string,
     address?:string,
     state?:string,
     city?:string,
@@ -45,8 +47,41 @@ export async function click(locator:string){
     await page.locator(locator).click();
 }
 
+export async function wait(time:number){
+    await page.waitForTimeout(time)
+}
+
+export async function forceClick(locator:string){
+    await page.locator(locator).click({ force: true });
+}
+
+export async function rightClick(locator:string){
+    await page.locator(locator).click({ button: 'right' });
+}
+
+export async function eventClick(locator:string){
+    await page.locator(locator).dispatchEvent('click');
+}
+
+export async function check(locator:string){
+    await page.locator(locator).check();
+}
+
+export async function isVisible(locator:string){
+    return await page.locator(locator).isVisible();
+}
+
+export async function hover(locator:string){
+    return await page.locator(locator).hover();
+}
+
 export async function fill(locator:string, text:string){
     await page.locator(locator).fill(text);
+
+}
+
+export async function upload(locator:string, text:string){
+    await page.locator(locator).setInputFiles(text);
 
 }
 

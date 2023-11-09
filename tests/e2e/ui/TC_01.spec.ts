@@ -5,7 +5,7 @@ import * as elements from "../../../pageobjects/demoqa.elements.ts";
 import * as webTables from "../../../pageobjects/demoqa.webtables.ts";
 
 export const params = {
-  //Scenario A Parameters
+  //Creation Parameters
   firstName:"Alden",
   lastName:"Cantrell",
   email:"test@test.com",
@@ -13,7 +13,7 @@ export const params = {
   salary:"12345",
   department:"QA",
 
-  //Scenario B Parameters
+  //Update Parameters
   rowToEdit:2,
   firstNameEdited:"Gerimedica",
   lastNameEdited:"BV"
@@ -33,12 +33,12 @@ test.describe('Verify user can enter new data into the table', () => {
     await webTables.verifyNavigationToWebTablesPage();
   });
 
-  test('Scenario A', async () => {
+  test('Create a new entry', async () => {
     await webTables.fillWebTableForm();
     await webTables.verifyCreatedEntry();
   });
 
-  test('Scenario B', async () => {
+  test('Update an entry', async () => {
     await webTables.editTableEntry(params.rowToEdit);
     await webTables.verifyEditedEntry(params.rowToEdit);
   });

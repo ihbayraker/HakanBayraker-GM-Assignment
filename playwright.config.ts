@@ -11,6 +11,9 @@ const config: PlaywrightTestConfig = {
     browserName:'chromium',
     headless: false,
     screenshot: "only-on-failure",
+    launchOptions: {
+      args: ["--start-maximized"],
+    },
   },
 };
 
