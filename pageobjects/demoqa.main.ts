@@ -27,3 +27,7 @@ export async function clickCategoryCardForms(){
 export async function clickCategoryCardWidget(){
     await click(page.categoryCardWidgets);
 }
+
+export async function clickCategoryCarInteractions(){
+    await click(page.categoryCardInteractions);
+}

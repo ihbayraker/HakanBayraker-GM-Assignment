@@ -33,12 +33,12 @@ test.describe('Verify user can enter new data into the table', () => {
     await webTables.verifyNavigationToWebTablesPage();
   });
 
-  test('Create a new entry', async () => {
+  test('Verify entry creation', async () => {
     await webTables.fillWebTableForm();
     await webTables.verifyCreatedEntry();
   });
 
-  test('Update an entry', async () => {
+  test('Verify entry updation', async () => {
     await webTables.editTableEntry(params.rowToEdit);
     await webTables.verifyEditedEntry(params.rowToEdit);
   });

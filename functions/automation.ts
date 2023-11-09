@@ -67,6 +67,11 @@ export async function check(locator:string){
     await page.locator(locator).check();
 }
 
+
+export async function dragTo(locator:string,locatorTwo:string){
+    return await page.locator(locator).dragTo(page.locator(locatorTwo));
+}
+
 export async function isVisible(locator:string){
     return await page.locator(locator).isVisible();
 }
