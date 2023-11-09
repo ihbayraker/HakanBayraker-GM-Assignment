@@ -90,11 +90,6 @@ export async function upload(locator:string, text:string){
 
 }
 
-export async function getRequest(url:string){
-    return await page.request.get(url);
-
-}
-
 export async function getAttirbute(locator:string, attribute:string){
     return await page.locator(locator).getAttribute(attribute)
 
@@ -138,3 +133,9 @@ export async function getText(locator:string, index:number){
     }
 
 }
+
+export async function getRequest(url:string){
+    return await page.request.get(url);
+
+}
+

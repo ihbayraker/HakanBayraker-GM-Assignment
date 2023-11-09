@@ -11,8 +11,7 @@ export const params = {
     mobile:"0123456789",
     birthday:"15 Jan 1990",
     birthdayLong:"15 January,1990",
-    //Subject cant be Playwright Assignment hence it was replaced with Comuputer science
-    subjects:"Computer Science",
+    subjects:"Computer Science",     //Subject cant be Playwright Assignment hence it was replaced with Comuputer science
     hobbies:"Reading",
     picture:"Toolsqa.jpg",
     picturePath:"./functions/Toolsqa.jpg",
