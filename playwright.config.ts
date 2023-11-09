@@ -10,7 +10,7 @@ const config: PlaywrightTestConfig = {
   use: {
     viewport: null,
     browserName:'chromium',
-    headless: true,
+    headless: false,
     screenshot: "only-on-failure",
     launchOptions: {
       args: ["--start-maximized"],
