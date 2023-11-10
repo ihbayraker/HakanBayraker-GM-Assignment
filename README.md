@@ -5,6 +5,7 @@
 - This project uses Playwright with typescript to automate web and api testing.
 - It's configured to run several web and api tests out of the box and uses page-object model as it's core framework.
 - The web test are ran on [DemoQA](https://demoqa.com) while api tests use this [Swagger](https://demoqa.com/swagger/).
+- Installing playwright and the dependencies are required to execute tests.
 - To execute the tests in default configuration locally run the command below through command console.
 ```sh
 $ npx playwright test
